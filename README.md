@@ -964,16 +964,11 @@ Annotated interface illustrations are used to explain intended functionality and
 ## 22 — Interactive Prototype
 
 <div align="center">
+### 🌐 Explore Jadwalak — Live Website
 
+**[🚀 Click here to launch Jadwalak](https://jadwalak-ai-academic-planning-platform-614442925222.europe-west2.run.app)**
 
-### 🌐 Try Jadwalak Live
-
-Explore the interactive website and experience
-Jadwalak's academic planning features firsthand.
-
-**[↗ Open Jadwalak Website](YOUR_WEBSITE_URL)**
-
-Click the link above to launch the interactive prototype.
+Experience the interactive prototype directly in your browser.
 No installation required.
 </div>
 
