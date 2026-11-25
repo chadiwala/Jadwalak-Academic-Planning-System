@@ -965,14 +965,16 @@ Annotated interface illustrations are used to explain intended functionality and
 
 <div align="center">
 
-### Experience Jadwalak
 
-Explore the interactive academic planning environment.
+### 🌐 Try Jadwalak Live
 
-[![Launch Jadwalak](https://img.shields.io/badge/Launch-Jadwalak-7563E8?style=for-the-badge)](https://jadwalak-ai-academic-planning-platform-614442925222.europe-west2.run.app)
+Explore the interactive website and experience
+Jadwalak's academic planning features firsthand.
 
-**Student · Academic Advisor · Schedule Administrator**
+**[↗ Open Jadwalak Website](YOUR_WEBSITE_URL)**
 
+Click the link above to launch the interactive prototype.
+No installation required.
 </div>
 
 ---
