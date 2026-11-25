@@ -1,19 +1,21 @@
 
 
-<div align="center">
-  <img src="./assets/IMG_6547.jpeg" 
-       width="100%" 
-       alt="Jadwalak | Beyond the Timetable">
-</div>
 
+<div align="center">
+
+<img src="./assets/IMG_6547.jpeg" width="100%" alt="Jadwalak Brand Identity">
+
+# Jadwalak | جدولك
 
 ### Beyond the Timetable
 
 **Academic Planning, Timetable Optimization & Decision Support System**
 
 [![Live Prototype](https://img.shields.io/badge/Explore-Live_Prototype-7563E8?style=for-the-badge)](https://jadwalak-ai-academic-planning-platform-614442925222.europe-west2.run.app)
-![Project](https://img.shields.io/badge/Project-Systems_Engineering-171C30?style=for-the-badge)
+![Engineering](https://img.shields.io/badge/Systems-Engineering-171C30?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Interactive_Prototype-4ADE80?style=for-the-badge)
+
+**King Saud University · College of Computer and Information Sciences · 2026**
 
 </div>
 
@@ -21,50 +23,47 @@
 
 ## 01 — Project Overview
 
-Jadwalak is an academic planning and timetable optimization system designed to support university students in making informed academic decisions.
+Jadwalak is an academic planning and timetable optimization system designed to help university students make informed academic decisions while staying on track toward graduation.
 
-Rather than treating scheduling as a simple calendar arrangement problem, Jadwalak approaches it as a constraint-based decision-making problem that considers academic eligibility, individual preferences, course dependencies, and graduation requirements.
+Unlike conventional timetable planners, Jadwalak approaches academic scheduling as a constraint-based decision-making problem involving academic eligibility, course dependencies, scheduling restrictions, personal preferences, and graduation requirements.
 
-The project was developed within the Systems Analysis & Design II course at King Saud University, combining requirements engineering, object-oriented design, optimization modeling, security engineering, and AI-assisted analysis.
+The project combines:
 
-### The Problem
+- Requirements Engineering
+- Systems Analysis and Design
+- Mathematical Optimization
+- Academic Decision Support
+- Object-Oriented Modeling
+- Security Engineering
+- Human-Centered Interface Design
+- AI-Assisted Engineering
 
-University students frequently face:
-
-- Complex combinations of available course sections.
-- Overlapping lectures and laboratory sessions.
-- Inefficient manual timetable comparisons.
-- Long waiting periods between classes.
-- Academic prerequisite and credit-hour restrictions.
-- Limited awareness of how scheduling decisions may affect graduation.
-
-A timetable may appear convenient while creating significant academic progression risks.
-
-### The Proposed Solution
-
-Jadwalak is designed to generate feasible timetable alternatives, rank them according to individual preferences, explain scheduling trade-offs, and identify potential academic progression risks before students complete official registration.
+Developed as an academic team project within the Systems Analysis & Design II course at King Saud University.
 
 ---
 
-## 02 — Project at a Glance
+## 02 — Problem Identification
 
-| Engineering Deliverable | Quantity |
-|---|---:|
-| Stakeholder Groups | 3 |
-| Initial Functional Requirements | 24 |
-| Revised Functional Requirements | 28 |
-| Non-functional Requirements | 10 |
-| Business Rules | 10 |
-| Security Risks Evaluated | 21 |
-| Software Reuse Candidates Evaluated | 15 |
-| Optimization Solvers Compared | 2 |
-| Team Members | 5 |
+University students frequently encounter difficulties when constructing their academic schedules.
+
+| Problem | Academic Impact |
+|---|---|
+| Overlapping course sections | Invalid timetable combinations |
+| Manual schedule construction | Increased planning time |
+| Long gaps between classes | Inefficient campus attendance |
+| Prerequisite restrictions | Academic ineligibility |
+| Poor course selection | Potential graduation delays |
+| Limited academic visibility | Uninformed registration decisions |
+
+A timetable may satisfy a student's personal preferences while negatively affecting their academic progression.
+
+Jadwalak addresses this problem by connecting timetable planning with academic decision support.
 
 ---
 
-## 03 — Systems Analysis Framework
+## 03 — Engineering Methodology
 
-The project followed a structured analysis and design process in which each engineering stage informed the next.
+The system was developed through a structured analysis and design process.
 
 ```mermaid
 flowchart TD
@@ -73,7 +72,7 @@ flowchart TD
     C --> D[Requirements Revision]
     D --> E[Requirements Baseline]
     E --> F[Development Methodology]
-    F --> G[Use Case Realization]
+    F --> G[Object-Oriented Design]
     G --> H[Security Engineering]
     H --> I[Software Reuse Evaluation]
     I --> J[Interactive Prototype]
@@ -83,147 +82,334 @@ flowchart TD
     style J fill:#4ADE80,color:#101426
 ```
 
-AI was used throughout the process as an analytical assistant, while final engineering decisions remained under the responsibility of the project team.
+Each stage contributed to defining the system's behavior, responsibilities, constraints, and proposed architecture.
 
 ---
 
-## 04 — Stakeholder Analysis & Requirements Elicitation
+## 04 — Stakeholder Analysis
 
-### Methodology
+Three primary stakeholder groups were identified according to their responsibilities within the academic planning environment.
 
-Requirements were initially collected through AI-simulated stakeholder interviews.
+<div align="center">
+<img src="./assets/IMG_6542.jpeg" width="100%" alt="Jadwalak Role-Based Workspace Portal">
+</div>
 
-Three stakeholder personas were established to represent different perspectives within the academic scheduling environment.
+<p align="center">
+<em>Figure 1 — Role-based workspace selection using simulated academic accounts.</em>
+</p>
 
-| Stakeholder | Primary Concerns |
+| Stakeholder | Responsibilities |
 |---|---|
-| University Student | Schedule conflicts, preferred times, campus days, academic progress |
-| Academic Advisor | Prerequisites, graduation risks, academic intervention |
-| Schedule Administrator | Data accuracy, authorized imports, timetable updates |
+| Student | Construct, compare, personalize, and save academic schedules |
+| Academic Advisor | Review academic progression and significant graduation risks |
+| Schedule Administrator | Manage and validate published timetable information |
 
-The interviews were structured around progressive questioning, clarification, scenario exploration, and follow-up questions.
+### Role-Based System Design
 
-### Analysis Mechanism
+The proposed system separates functionality according to user responsibilities.
 
-The elicitation process followed these steps:
+Students interact with scheduling and academic planning services.
 
-1. Identify the stakeholder's responsibilities and objectives.
-2. Explore existing scheduling difficulties.
-3. Investigate current decision-making processes.
+Academic advisors access relevant academic information for assigned students, subject to authorization.
+
+Schedule administrators manage published course and section information.
+
+The prototype demonstrates role-specific entry points using simulated accounts. It does not connect to official university authentication or registration services.
+
+---
+
+## 05 — Requirements Elicitation
+
+### Elicitation Method
+
+AI-simulated stakeholder interviews were used to explore the needs of students, academic advisors, and schedule administrators.
+
+The interviews followed a progressive questioning methodology:
+
+1. Identify stakeholder responsibilities.
+2. Investigate existing academic planning difficulties.
+3. Explore current decision-making processes.
 4. Identify expected system capabilities.
-5. Examine exceptional and conflicting scenarios.
-6. Clarify ambiguous stakeholder responses.
-7. Translate identified needs into functional requirements.
-8. Establish system boundaries.
+5. Examine exceptional scenarios.
+6. Clarify ambiguous responses.
+7. Translate stakeholder needs into functional requirements.
+8. Define system boundaries.
 
-### Example: Academic Progression Risk
+### Scenario-Based Analysis
 
-A simulated academic advisor interview explored the consequences of removing a required course from a proposed timetable.
+An academic advisor scenario investigated the consequences of removing a required course from a student's proposed timetable.
 
-The analysis identified that a scheduling decision could affect future academic progress when:
+The analysis identified several relevant factors:
 
-- The course is a prerequisite for subsequent courses.
-- The course is offered only once per academic year.
-- The course belongs to the final academic level.
+- Prerequisite dependencies.
+- Course offering frequency.
+- Remaining graduation requirements.
+- Potential academic progression delays.
+- Appropriate advisor intervention.
 
-This led to requirements for academic risk detection, student warnings, and conditional advisor notifications.
+This scenario contributed to the proposed academic risk assessment and notification requirements.
 
-### Outcome
-
-The elicitation stage produced 24 initial functional requirements.
-
-All stakeholder interviews were simulations conducted using ChatGPT. They were not interviews with actual university employees or students.
+All documented stakeholder interviews were AI simulations rather than interviews with actual university employees or students.
 
 ---
 
-## 05 — Requirements Analysis & Revision
+## 06 — Requirements Analysis & Revision
 
-The initial requirements were reviewed to identify ambiguity, missing information, conflicting expectations, and insufficiently defined system behavior.
+### Revised Functional Requirements
 
-ChatGPT was assigned the role of a senior systems analyst to critique the requirements rather than independently finalize them.
-
-### Critical Evaluation Framework
-
-Each recommendation was evaluated using three possible decisions:
-
-| Decision | Meaning |
+| ID | Requirement Statement |
 |---|---|
-| Accept | The recommendation satisfies the system's needs and scope. |
-| Modify | The recommendation is useful but requires adaptation. |
-| Reject | The recommendation is unnecessary, unsuitable, or outside the project scope. |
+| FR-01 | The system shall display published course and section information from an approved source. |
+| FR-02 | The system shall show section meeting times, instructors and other available published details. |
+| FR-03 | The system shall allow students to select courses for a proposed timetable. |
+| FR-04 | The system shall use available academic progress data to inform planning, with source and freshness visible. |
+| FR-05 | The system shall check known prerequisite and co-requisite rules. |
+| FR-06 | The system shall validate proposed credit-hour limits using approved rules. |
+| FR-07 | The system shall generate feasible timetable alternatives from selected courses. |
+| FR-08 | The system shall exclude overlapping class sections from feasible alternatives. |
+| FR-09 | The system shall collect mandatory constraints separately from optional preferences. |
+| FR-10 | The system shall rank feasible alternatives against ordered student preferences. |
+| FR-11 | The system shall present multiple feasible alternatives where available. |
+| FR-12 | The system shall enable side-by-side comparison of alternatives. |
+| FR-13 | The system shall explain important trade-offs among proposed schedules. |
+| FR-14 | The system shall preserve student-locked sections during regeneration. |
+| FR-15 | The system shall allow preference changes and regeneration. |
+| FR-16 | The system shall allow a student to retain a preferred proposed timetable. |
+| FR-17 | The system shall regenerate alternatives after changes to selected courses or sections. |
+| FR-18 | The system shall explain conflicts or unmet constraints if no valid timetable can be generated. |
+| FR-19 | The system shall allow authorized advisors to locate assigned student planning records by approved identifier. |
+| FR-20 | The system shall show authorized advisors relevant progress and proposed planning information. |
+| FR-21 | The system shall detect and explain identifiable academic progression risks when a student removes a required course from a proposed timetable, using available study-plan and prerequisite evidence; it shall label an assessment as uncertain when the available evidence is insufficient. |
+| FR-22 | The system shall notify the assigned academic advisor when a detected academic risk meets approved intervention criteria and shall consolidate duplicate notifications. |
+| FR-23 | The system shall allow authorized staff to import and validate published section data; reject incomplete or invalid records. |
+| FR-24 | The system shall apply authorized timetable updates and show source version or last-updated time. |
+| FR-25 | The system shall allow each student to save up to three active proposed timetable alternatives and shall require explicit replacement of an existing version before saving a fourth. |
+| FR-26 | The system shall clearly state that published sections do not guarantee available seats and that official course enrollment occurs outside Jadwalak. |
+| FR-27 | The system shall allow students to export or print their selected proposed timetable, including course names, course codes, section numbers, meeting days, and class times, for reference during official university registration. |
+| FR-28 | The system shall require students, academic advisors, and schedule administrators to authenticate using an authorized university account before accessing role-restricted functions, subject to institutional authorization and integration availability. |
 
-### Key Engineering Decisions
+### Non-Functional Requirements
 
-| Identified Issue | Final Design Decision |
+| ID | Requirement Statement |
 |---|---|
-| Published sections versus live seat availability | Use published timetable data and explicitly disclose that seats are not guaranteed. |
-| Academic data source | Use an authorized read-only source with visible data freshness. |
-| Undefined preference ranking | Separate mandatory constraints from ordered optional preferences. |
-| Locked sections preventing valid schedules | Preserve locks and explain why a valid result cannot be generated. |
-| Excessive advisor notifications | Warn students first and notify advisors only under approved intervention criteria. |
-| Invalid timetable imports | Validate required fields and reject invalid records. |
-| Unmeasurable performance requirements | Define a measurable performance benchmark. |
-| Saved timetable management | Allow three active alternatives with explicit replacement. |
+| NFR-01 | The system shall enforce role-based access control and least-privilege permissions for students, assigned academic advisors, and schedule administrators. |
+| NFR-02 | The system shall prevent unauthorized modification of official enrollment data and university academic records. |
+| NFR-03 | The system shall present constraints, schedule alternatives, trade-offs, and risk explanations in understandable and accessible language. |
+| NFR-04 | The system shall validate imported timetable data and retain traceable information about authorized updates. |
+| NFR-05 | The system should complete at least 95% of standard timetable-generation requests within five seconds under a defined benchmark workload; this is a proposed target, not a verified measurement. |
+| NFR-06 | The system shall protect student personal and academic information in transit and at rest using institution-approved security controls. |
+| NFR-07 | The system shall visually distinguish planning recommendations from official enrollment status. |
+| NFR-08 | The system shall log privileged access and timetable imports to the extent permitted by institutional policy. |
+| NFR-09 | The system shall display relevant data freshness information and disclose uncertainty in academic-risk estimates. |
+| NFR-10 | The system shall handle failed schedule generation and invalid imports without corrupting previously saved valid data. |
 
-The initial review resulted in five accepted and three modified recommendations.
+### Business Rules
 
-Additional requirements for authentication and timetable export were subsequently incorporated.
+| ID | Rule |
+|---|---|
+| BR-01 | A valid proposed timetable must not contain overlapping scheduled class meetings. |
+| BR-02 | Course eligibility must follow approved prerequisite and co-requisite rules. |
+| BR-03 | Planned credit loads must comply with applicable approved limits unless an authorized exception applies. |
+| BR-04 | Published course and section data must originate from an authorized source. |
+| BR-05 | Only authorized roles may manage published section data or approve institutional exceptions. |
+| BR-06 | Saving a timetable in Jadwalak does not enroll the student in any course. |
+| BR-07 | Jadwalak must not create official sections, reserve seats, or guarantee seat availability. |
+| BR-08 | The student retains control of changes to the proposed timetable; Jadwalak may warn or notify an advisor but must not silently remove planned courses or override the student’s choices. Official university rules still apply. |
+| BR-09 | Immediate advisor notifications must be limited to risks meeting approved escalation criteria; repeated alerts should be consolidated. |
+| BR-10 | A student may maintain at most three active saved alternatives during the registration period; post-registration retention requires an approved policy. |
 
-### Final Requirements Baseline
 
-- 28 Functional Requirements
-- 10 Non-functional Requirements
-- 10 Business Rules
+The initial requirements were critically reviewed to identify ambiguity, missing functionality, conflicting expectations, and insufficiently defined system behavior.
 
-This baseline provides the foundation for subsequent system design decisions.
+AI was assigned the role of a senior systems analyst to critique the requirements.
+
+### Accept / Modify / Reject Framework
+
+| Decision | Purpose |
+|---|---|
+| Accept | Incorporate suitable recommendations |
+| Modify | Adapt recommendations to project constraints |
+| Reject | Exclude unsuitable or out-of-scope recommendations |
+
+### Engineering Decisions
+
+| Identified Issue | Proposed Resolution |
+|---|---|
+| Published sections versus live seat availability | Explicitly distinguish timetable information from guaranteed registration availability |
+| Academic data access | Authorized read-only integration |
+| Undefined preference priorities | Separate mandatory constraints from ordered preferences |
+| Conflicting locked sections | Preserve selections and explain infeasibility |
+| Excessive advisor notifications | Apply controlled escalation criteria |
+| Invalid timetable imports | Validate data before acceptance |
+| Unmeasurable performance requirements | Establish measurable performance targets |
+| Saved timetable management | Support three active alternatives with explicit replacement |
+
+### Requirements Baseline
+
+| Deliverable | Quantity |
+|---|---:|
+| Stakeholder Groups | 3 |
+| Initial Functional Requirements | 24 |
+| Revised Functional Requirements | 28 |
+| Non-functional Requirements | 10 |
+| Business Rules | 10 |
 
 ---
 
-## 06 — Constraint-Based Timetable Optimization
+## 07 — Student Academic Dashboard
+
+<div align="center">
+<img src="./assets/IMG_6543.jpeg" width="100%" alt="Jadwalak Student Academic Dashboard">
+</div>
+
+<p align="center">
+<em>Figure 2 — Centralized academic overview and decision-support dashboard.</em>
+</p>
+
+The student dashboard provides a consolidated representation of academic information.
+
+### Academic Progress Tracking
+
+The interface displays:
+
+- Completed credit hours.
+- Total degree requirements.
+- Remaining credit hours.
+- Current semester courses.
+
+For the simulated student shown in the prototype:
+
+- Total required credits: 128
+- Completed credits: 96
+- Remaining credits: 32
+- Current planned credits: 15
+
+Academic completion can be represented as:
+
+$$
+Progress = \frac{CompletedCredits}{RequiredCredits}\times100
+$$
+
+For the displayed example:
+
+$$
+Progress = \frac{96}{128}\times100 = 75\%
+$$
+
+### Saved Schedule Management
+
+The dashboard provides access to previously saved timetable alternatives.
+
+The proposed business rules allow students to maintain up to three active saved schedules.
+
+### Academic Risk Awareness
+
+The dashboard also displays warnings related to courses that may affect future academic progression.
+
+These warnings provide access to further course-drop impact analysis.
+
+---
+
+## 08 — Smart Schedule Builder
+
+The scheduling workflow transforms student preferences and course selections into a structured optimization problem.
+
+<table>
+<tr>
+<td width="50%" align="center">
+<img src="./assets/7AA49770-70B3-4437-938D-85D37BA54F66.png" width="100%" alt="Scheduling Constraints and Schedule Builder">
+<br>
+<b>01 — Input & Constraints</b>
+</td>
+<td width="50%" align="center">
+<img src="./assets/B47C79B8-BFF0-4D67-AB1B-F6682C42A6E7.png" width="100%" alt="Schedule Alternatives and Timetable">
+<br>
+<b>02 — Timetable Alternatives</b>
+</td>
+</tr>
+</table>
+
+<p align="center">
+<em>Figure 3 — Annotated interface illustrations of the scheduling input and output workflow.</em>
+</p>
+
+### Input Parameters
+
+The interface allows students to specify:
+
+- Selected academic courses.
+- Preferred attendance days.
+- Earliest acceptable class time.
+- Latest acceptable class time.
+- Preferred break periods.
+- Gap minimization preferences.
+- Selected or locked sections.
+
+### Processing Mechanism
+
+The proposed scheduling engine performs:
+
+1. Academic eligibility validation.
+2. Published section retrieval.
+3. Mandatory constraint evaluation.
+4. Time conflict detection.
+5. Feasible combination generation.
+6. Preference-based ranking.
+7. Alternative timetable generation.
+
+### Output
+
+The interface demonstrates multiple timetable alternatives presented through an interactive weekly calendar.
+
+Each scheduled course contains its course identifier, section identifier, and meeting time.
+
+---
+
+## 09 — Mathematical Optimization Model
 
 ### Problem Formulation
 
-The scheduling problem is modeled as a constrained selection problem.
+Academic timetable generation is modeled as a constrained combinatorial optimization problem.
 
-Each course may have several published sections, and each section may contain one or more scheduled meetings.
+Each selected course may have several published section options.
 
-The system must identify combinations of sections that satisfy mandatory academic and scheduling constraints while maximizing satisfaction of student preferences.
+The objective is to identify feasible section combinations while satisfying academic requirements and optimizing student preferences.
 
 ### Decision Variables
 
-For the proposed optimization model, let:
+Let:
 
 $$
-x_{c,s} \in \{0,1\}
+x_{c,s}\in\{0,1\}
 $$
 
 Where:
 
 - c represents a selected course.
-- s represents an available section.
-- x = 1 means the section is selected.
-- x = 0 means the section is not selected.
+- s represents a section option.
+- x = 1 indicates that the section is selected.
+- x = 0 indicates that the section is not selected.
 
 ### Hard Constraints
 
-Hard constraints define whether a proposed timetable is feasible.
+Hard constraints determine whether a timetable is feasible.
 
-#### 1. Section Selection
+#### Section Selection
 
 Exactly one compatible section option must be selected for each requested course.
 
 $$
-\sum_{s \in S_c} x_{c,s} = 1
+\sum_{s\in S_c}x_{c,s}=1
 $$
 
 Associated lecture and laboratory requirements must also be respected.
 
-#### 2. Conflict Detection
+#### Time Conflict Prevention
 
-If two section options contain overlapping scheduled meetings, they cannot both be selected.
+If two section options contain overlapping meetings, both cannot be selected simultaneously.
 
 $$
-x_i + x_j \leq 1
+x_i+x_j\leq1
 $$
 
 Two meetings overlap when they occur on the same day and:
@@ -232,231 +418,231 @@ $$
 start_i < end_j
 $$
 
-and
+and:
 
 $$
 start_j < end_i
 $$
 
-#### 3. Academic Eligibility
+#### Academic Eligibility
 
-Selected courses must satisfy approved prerequisite and co-requisite rules.
+Course selection must respect applicable prerequisite and co-requisite rules.
 
-Previously completed courses and available academic progress information are considered during eligibility validation.
+#### Credit-Hour Validation
 
-#### 4. Credit-hour Restrictions
-
-The proposed course load must comply with applicable academic credit-hour limits.
+The proposed academic load must satisfy institutional credit-hour restrictions.
 
 $$
-C_{min} \leq \sum_{c \in C} credits_c \leq C_{max}
+C_{min}\leq\sum_{c\in C}credits_c\leq C_{max}
 $$
 
-The applicable limits depend on the student's academic status and approved institutional rules.
+#### Locked Sections
 
-#### 5. Locked Sections
-
-When a student locks a section, that selection must remain fixed during regeneration.
+A locked section must remain selected during timetable regeneration.
 
 $$
-x_{c,s} = 1
+x_{c,s}=1
 $$
 
-If locked sections prevent a feasible solution, the system must explain the conflict rather than silently removing the locks.
+If locked sections make the problem infeasible, the proposed system explains the conflict rather than silently removing them.
 
 ### Soft Constraints
 
-Soft constraints represent preferences rather than mandatory conditions.
+Soft constraints represent student preferences.
 
 Examples include:
 
-- Minimizing the number of campus days.
+- Minimizing campus attendance days.
 - Minimizing gaps between classes.
-- Avoiding undesirable class times.
-- Favoring preferred sections or meeting times.
+- Avoiding undesirable meeting times.
+- Preserving preferred break periods.
+- Favoring preferred sections.
 
-Students arrange their preferences in order of importance.
+### Preference-Based Optimization
 
-### Preference-based Ranking
-
-The proposed design supports ordered optimization objectives rather than arbitrary fixed preference weights.
-
-A possible implementation is lexicographic optimization:
+An illustrative mathematical approach is lexicographic optimization:
 
 $$
-\min_{\mathrm{lex}} (f_1(x),f_2(x),...,f_m(x))
+\min_{\mathrm{lex}}(f_1(x),f_2(x),...,f_m(x))
 $$
 
-Where each objective represents a preference ordered by the student.
+Each objective represents a preference ordered by the student.
 
-For example, if minimizing campus days is ranked above minimizing gaps, a timetable with fewer campus days receives priority even when another alternative has shorter gaps.
+Higher-priority objectives are optimized before lower-priority objectives.
 
-The exact scoring and tie-breaking implementation requires further development and validation.
+The mathematical formulation is an explanatory extension of the proposed system design, not a claim of verified solver implementation.
 
 ---
 
-## 07 — Optimization Solver Selection
+## 10 — Optimization Solver Evaluation
 
-Two optimization libraries were evaluated:
+Two optimization technologies were evaluated for the proposed system.
 
 | Criterion | OR-Tools CP-SAT | Timefold Solver |
 |---|---|---|
-| Hard Constraints | Explicit constraint modeling | Hard-score constraints |
-| Ordered Preferences | Sequential objectives or bounded weights | Score levels or custom scoring |
-| Locked Sections | Fixed selection variables | Pinning or constraints |
-| Multiple Alternatives | Repeated solving with exclusions | Repeated solving or diversification |
-| Infeasibility | Explicit solver status | Requires verification of hard-score violations |
-| Integration | Java API and native runtime | Java domain and constraint model |
+| Constraint Modeling | Explicit mathematical constraints | Constraint-based scoring |
+| Hard Constraints | Direct feasibility enforcement | Hard-score evaluation |
+| Preferences | Sequential or weighted objectives | Score-based optimization |
+| Locked Sections | Fixed decision variables | Pinning or constraints |
+| Alternative Generation | Repeated solving with exclusions | Repeated solving or diversification |
+| Java Integration | Java API | Java-based framework |
 
-### Selected Solver: Google OR-Tools CP-SAT
+### Proposed Solver: Google OR-Tools CP-SAT
 
-OR-Tools CP-SAT was selected for the proposed implementation because it supports explicit feasibility constraints, binary decision variables, locked selections, and repeated optimization.
+CP-SAT was selected for the proposed implementation because of its suitability for binary decision variables, explicit constraints, feasibility checking, and combinatorial optimization.
 
-Timefold was retained as a possible fallback but was not selected as an additional dependency.
+### Alternative Generation
 
-### Generating Multiple Alternatives
+After obtaining one feasible solution, the exact selected combination can be excluded from subsequent solver runs.
 
-After identifying one feasible timetable, the previous solution can be excluded from subsequent solver runs.
-
-For a timetable containing k selected section variables:
+For a previously selected combination containing k section variables:
 
 $$
-\sum_{i \in S^*} x_i \leq k-1
+\sum_{i\in S^*}x_i\leq k-1
 $$
 
-This prevents the solver from returning the exact same section combination.
+This enables the proposed solver to search for distinct alternatives.
 
-Repeated solving can therefore generate distinct alternatives for comparison.
+### Solver Status Handling
 
-### Solver Outcome Handling
+The system should distinguish between:
 
-The system must distinguish between:
-
-- Optimal solution found.
-- Feasible solution found.
+- Optimal solution.
+- Feasible solution.
 - Proven infeasibility.
-- Search terminated without a conclusive result.
+- Inconclusive search.
 
-A timeout must not be interpreted as proof that no feasible timetable exists.
-
-> The mathematical formulation in this section is an illustrative elaboration of the proposed constraint-based design. It does not represent a verified implementation or benchmark result.
+A solver timeout must not be interpreted as proof of infeasibility.
 
 ---
 
-## 08 — Proposed Schedule Generation Workflow
+## 11 — Schedule Visualization & Interaction
 
-```mermaid
-flowchart TD
-    A[Student selects courses] --> B[Retrieve academic progress]
-    B --> C{Academic eligibility valid?}
-    C -- No --> D[Explain eligibility restrictions]
-    C -- Yes --> E{Credit load valid?}
-    E -- No --> F[Explain credit restrictions]
-    E -- Yes --> G[Retrieve published sections]
-    G --> H[Apply hard constraints and locks]
-    H --> I[CP-SAT Solver]
-    I --> J{Solver outcome}
-    J -- Infeasible --> K[Explain constraints and conflicts]
-    J -- Inconclusive --> L[Report incomplete search]
-    J -- Feasible --> M[Optimize ordered preferences]
-    M --> N[Generate distinct alternatives]
-    N --> O[Compare schedules and explain trade-offs]
-    O --> P[Save or export preferred timetable]
+<div align="center">
+<img src="./assets/FCD5343E-310C-4F01-A88F-16C37BF8574B.png" width="100%" alt="Interactive Timetable Visualization">
+</div>
 
-    style A fill:#171C30,color:#fff
-    style I fill:#7563E8,color:#fff
-    style P fill:#4ADE80,color:#101426
-```
+<p align="center">
+<em>Figure 4 — Annotated visualization of timetable alternatives and weekly calendar interaction.</em>
+</p>
+
+### Alternative Navigation
+
+The prototype displays a best-match option and additional timetable alternatives.
+
+Students can navigate between alternatives to inspect different academic schedules.
+
+### Weekly Calendar
+
+The calendar organizes course meetings according to their corresponding day and time.
+
+Color-coded course blocks improve visual differentiation between academic subjects.
+
+### Section Locking
+
+The interface displays locked sections, illustrating the intended ability to preserve selected course sections during schedule regeneration.
+
+### Explainable Scheduling
+
+The proposed design aims to communicate why alternatives differ, rather than presenting a single schedule without context.
 
 ---
 
-## 09 — Academic Decision Support
+## 12 — Academic Decision Support
 
-Jadwalak extends timetable planning by incorporating academic progression considerations.
+Jadwalak extends beyond timetable generation by considering how academic decisions may influence graduation.
 
-### Risk Detection Mechanism
+<div align="center">
+<img src="./assets/IMG_6543.jpeg" width="85%" alt="Academic Risk Awareness">
+</div>
 
-When a student removes a required course from a proposed timetable, the system evaluates available academic evidence to identify potential progression risks.
+<p align="center">
+<em>Figure 5 — Academic risk awareness integrated into the student dashboard.</em>
+</p>
 
-The proposed assessment considers:
+### Prerequisite Dependency Analysis
 
-- Course prerequisite dependencies.
+Course dependencies can be represented as a directed graph:
+
+$$
+G=(V,E)
+$$
+
+Where:
+
+- V represents academic courses.
+- E represents prerequisite relationships.
+
+A directed edge from course A to course B indicates that A must be completed before B, according to the applicable prerequisite rule.
+
+Removing a course may affect directly and indirectly dependent courses.
+
+### Proposed Risk Assessment
+
+The system evaluates:
+
+- Prerequisite relationships.
+- Dependent courses.
 - Course offering frequency.
 - Remaining graduation requirements.
-- The course's position within the academic study plan.
+- Potential academic progression delays.
+
+### Evidence and Uncertainty
+
+The proposed design distinguishes between:
+
+**Confirmed academic rules**
+
+Institutional requirements supported by authorized academic data.
+
+**Projected academic consequences**
+
+Estimated future outcomes that depend on assumptions about course availability and institutional decisions.
 
 ### Intervention Workflow
 
 ```mermaid
 flowchart TD
-    A[Required course removed from proposed plan] --> B[Evaluate academic dependencies]
-    B --> C{Sufficient academic evidence?}
-    C -- No --> D[Display uncertain assessment]
-    C -- Yes --> E{Significant progression risk?}
-    E -- No --> F[Continue planning]
-    E -- Yes --> G[Warn student and explain risk]
-    G --> H{Approved escalation criteria met?}
-    H -- No --> I[Student retains control]
-    H -- Yes --> J[Notify assigned academic advisor]
-    J --> K[Consolidate duplicate notifications]
+    A[Student considers removing a course] --> B[Analyze prerequisite dependencies]
+    B --> C[Evaluate academic progression]
+    C --> D{Significant risk?}
+    D -- No --> E[Continue planning]
+    D -- Yes --> F[Display risk explanation]
+    F --> G{Approved escalation criteria met?}
+    G -- Yes --> H[Notify assigned advisor]
+    G -- No --> I[Student retains control]
 
-    style G fill:#7563E8,color:#fff
+    style F fill:#7563E8,color:#fff
+    style H fill:#171C30,color:#fff
     style I fill:#4ADE80,color:#101426
 ```
 
-The advisor notification mechanism is designed to reduce unnecessary alerts through consolidated reporting and approved intervention criteria.
+Advisor notifications require institutional approval and authorized integration.
 
-The system provides decision support rather than automatically modifying academic records or overriding student decisions.
-
-Institutional approval is required before integrating real academic records or advisor notifications.
+The graph-based formulation is an illustrative technical explanation of the proposed academic dependency analysis.
 
 ---
 
-## 10 — Object-Oriented Systems Design
+## 13 — Object-Oriented Systems Design
 
 ### Selected Use Case
 
 **Generate Optimized Schedule**
 
-This use case was selected because timetable generation represents the core functionality upon which several other system capabilities depend.
+This use case represents the central interaction between academic validation, course selection, timetable construction, and preference evaluation.
 
-### Domain Objects
+### Domain Responsibilities
 
 | Object | Responsibility |
 |---|---|
-| ScheduleHandler | Coordinate the schedule generation use case |
-| StudentRecord | Provide completed courses and academic progress information |
-| Course | Provide course eligibility information and associated sections |
-| Section | Represent scheduled meetings and detect overlaps |
-| Timetable | Represent an individual schedule alternative |
-| Preference | Represent and evaluate student preferences |
+| ScheduleHandler | Coordinate schedule generation |
+| StudentRecord | Provide academic progress information |
+| Course | Represent course eligibility and associated sections |
+| Section | Represent scheduled meetings |
+| Timetable | Represent an individual timetable alternative |
+| Preference | Represent student scheduling preferences |
 
-### Sequence Diagram
-
-The initial sequence diagram was reviewed using Claude as an object-oriented systems design consultant.
-
-The review identified several issues:
-
-- Incorrect assignment of responsibilities between Course and Section.
-- A Timetable object being responsible for generating and ranking other timetables.
-- Ambiguous eligibility conditions.
-- Missing alternative and failure paths.
-- Insufficiently explicit ranking interactions.
-
-### Design Improvements
-
-The revised design:
-
-- Assigns section retrieval to Course.
-- Uses Timetable to represent a single alternative.
-- Makes ScheduleHandler responsible for coordinating alternatives.
-- Clarifies eligibility conditions.
-- Includes failure responses.
-- Makes ranking responsibilities explicit.
-
-The team accepted four recommendations, modified two, and rejected two.
-
-### Simplified Interaction Model
+### Simplified Sequence Diagram
 
 ```mermaid
 sequenceDiagram
@@ -464,97 +650,134 @@ sequenceDiagram
     participant H as ScheduleHandler
     participant R as StudentRecord
     participant C as Course
-    participant T as Timetable
     participant S as Section
+    participant T as Timetable
     participant P as Preference
 
     Student->>H: generateSchedule(courses, preferences)
     H->>R: getCompletedCourses()
-    R-->>H: completedCourses
+    R-->>H: academicRecord
 
-    loop Each selected course
-        H->>C: checkPrerequisites(completedCourses)
-        C-->>H: eligibility
+    loop Selected courses
+        H->>C: checkEligibility(academicRecord)
+        C-->>H: eligibilityResult
     end
 
-    alt All courses eligible and credit load valid
+    alt Valid academic requirements
         H->>C: getSections()
         C-->>H: availableSections
 
-        loop Candidate section combinations
-            H->>T: createTimetable()
-            T->>S: overlapsWith(section)
+        loop Candidate combinations
+            H->>T: createAlternative()
+            T->>S: checkOverlap()
             S-->>T: conflictStatus
-            H->>P: evaluateAlternative(timetable)
-            P-->>H: preferenceScore
+            H->>P: evaluateAlternative()
+            P-->>H: preferenceEvaluation
         end
 
         H->>H: rankAlternatives()
-        H-->>Student: alternatives and explanations
-    else Invalid academic or scheduling constraints
-        H-->>Student: failure explanation
+        H-->>Student: rankedTimetables
+    else Invalid requirements
+        H-->>Student: explainFailure()
     end
 ```
 
-This diagram is a simplified representation of the documented object-oriented design.
+### Design Review
+
+The initial interaction model was reviewed to improve:
+
+- Object responsibility allocation.
+- Separation of coordination and domain behavior.
+- Academic eligibility conditions.
+- Alternative and failure paths.
+- Preference evaluation responsibilities.
+
+The diagram above is a simplified explanatory representation of the proposed design.
 
 ---
 
-## 11 — Development Methodology
+## 14 — Bilingual User Experience
+
+<table>
+<tr>
+<td width="50%" align="center">
+<img src="./assets/IMG_6543.jpeg" width="100%" alt="English Student Workspace">
+<br>
+<b>English — LTR</b>
+</td>
+<td width="50%" align="center">
+<img src="./assets/IMG_6545.jpeg" width="100%" alt="Arabic Student Workspace">
+<br>
+<b>Arabic — RTL</b>
+</td>
+</tr>
+</table>
+
+<p align="center">
+<em>Figure 6 — English and Arabic interface examples.</em>
+</p>
+
+The prototype demonstrates a bilingual experience supporting English and Arabic.
+
+### Localization Mechanisms
+
+- Left-to-right English navigation.
+- Right-to-left Arabic navigation.
+- Localized interface labels.
+- Adapted calendar orientation.
+- Consistent visual identity.
+- Language switching within the workspace.
+
+The bilingual design addresses the needs of Arabic-speaking university students while maintaining accessibility for English-speaking users.
+
+---
+
+## 15 — Development Methodology
 
 ### Selected Approach
 
 **Lightweight Agile / Scrum**
 
-The team compared Agile and Waterfall according to project complexity, stakeholder involvement, requirement stability, development risks, and delivery constraints.
-
-Agile was selected because several institutional integration requirements remained unresolved, while the core optimization and interface design required iterative refinement.
+Agile was selected as the proposed development methodology because the system involves evolving requirements, unresolved institutional integration dependencies, and iterative interface refinement.
 
 ### Proposed Development Structure
 
-| Phase | Focus |
+| Phase | Objective |
 |---|---|
-| Sprint 0 | Architecture and domain-model baseline |
-| Iterative Sprints | Incremental development and testing |
-| Sprint Reviews | Evaluation and stakeholder feedback |
-| Backlog Refinement | Requirement prioritization and unresolved issues |
-
-The proposed development plan uses a one-week Sprint 0 followed by two-week sprints.
+| Sprint 0 | Establish architecture and domain-model baseline |
+| Development Sprints | Incremental implementation |
+| Sprint Reviews | Evaluate completed functionality |
+| Backlog Refinement | Prioritize requirements and resolve uncertainties |
+| Validation | Evaluate functional and non-functional requirements |
 
 ### Supporting Practices
 
-- MoSCoW requirement prioritization.
-- T-shirt size effort estimation.
-- Weekly team check-ins.
-- Sprint reviews.
-- Rotating documentation responsibility.
+- MoSCoW prioritization.
+- T-shirt size estimation.
+- Iterative design reviews.
 - Requirements traceability.
-
-The methodology evaluation resulted in five accepted, three modified, and one rejected recommendation.
+- Team coordination.
+- Incremental validation.
 
 ---
 
-## 12 — Security Engineering
+## 16 — Security Engineering
 
-Security analysis was conducted across authentication, authorization, confidentiality, integrity, privacy, access control, and availability.
+The proposed security architecture addresses authentication, authorization, confidentiality, integrity, privacy, and availability.
 
-A total of 21 security risks were evaluated.
-
-### Proposed Security Controls
-
-| Security Domain | Proposed Mechanism |
+| Security Domain | Proposed Control |
 |---|---|
-| Authentication | Authorized university SSO, subject to integration approval |
+| Authentication | Authorized university SSO |
 | Privileged Accounts | University-provided MFA |
-| Session Security | Secure cookies, server-side logout, 20-minute inactivity timeout |
-| Authorization | Role-based access control and deny-by-default permissions |
-| Record-level Security | Ownership and advisor-student assignment checks |
-| Confidentiality | TLS, encryption at rest, minimal data collection |
-| Data Integrity | Server-side validation and controlled timetable imports |
-| Import Security | Schema validation, preview and rollback |
-| Database Security | Parameterized queries and least-privilege access |
-| Privacy | Minimal notification content and approved retention policies |
-| Accountability | Audit logs for privileged actions |
+| Session Management | Secure cookies and inactivity timeout |
+| Authorization | Role-based access control |
+| Record-Level Access | Ownership and advisor assignment checks |
+| Confidentiality | TLS and encryption at rest |
+| Data Integrity | Server-side validation |
+| Import Security | Schema validation and controlled rollback |
+| Database Security | Parameterized queries and least privilege |
+| Privacy | Data minimization and approved retention policies |
+| Accountability | Audit logging |
 | Availability | Rate limiting and bounded solver execution |
 
 ### Access Control Model
@@ -564,39 +787,24 @@ A total of 21 security risks were evaluated.
 | Manage own proposed timetable | Yes | No | No |
 | Review assigned student plans | No | Yes | No |
 | Receive qualifying risk alerts | No | Yes | No |
-| Import published sections | No | No | Yes |
+| Import published timetable data | No | No | Yes |
 | Modify official academic records | No | No | No |
 
-### Security Evaluation Results
-
-- 14 recommendations accepted.
-- 6 recommendations modified.
-- 1 recommendation rejected.
-
-These controls represent the proposed security architecture and have not been presented as independently audited or production-verified mechanisms.
+These controls represent proposed production requirements rather than independently verified security mechanisms.
 
 ---
 
-## 13 — Software Reuse & Architecture Decisions
+## 17 — Software Reuse & Architecture
 
-Fifteen reusable components, frameworks, services, modules, and design patterns were evaluated.
+Reusable components were evaluated according to functional suitability, compatibility, maintainability, security, licensing, and integration complexity.
 
-### Evaluation Criteria
+### Proposed Technology Stack
 
-- Functional suitability.
-- Technical compatibility.
-- Maintainability.
-- Security implications.
-- Licensing.
-- Integration complexity.
-
-### Selected Components
-
-| Component | Proposed Responsibility |
+| Component | Responsibility |
 |---|---|
 | Google OR-Tools CP-SAT | Constraint-based timetable optimization |
-| Spring Boot | Backend application services |
-| Spring Security | Authentication and authorization mechanisms |
+| Spring Boot | Application services |
+| Spring Security | Authentication and authorization |
 | PostgreSQL | Structured data persistence |
 | FullCalendar | Timetable visualization |
 | Apache Commons CSV | Published timetable data parsing |
@@ -604,30 +812,30 @@ Fifteen reusable components, frameworks, services, modules, and design patterns 
 | University SSO | Conditional institutional authentication |
 | Email Service | Conditional advisor notifications |
 
-### Reusable Design Patterns
+### Design Patterns
 
 **Strategy Pattern**
 
-Separates preference-ranking behavior from the core scheduling workflow, allowing ranking policies to evolve without redesigning the entire system.
+Separates preference-ranking policies from the core scheduling workflow.
 
 **Observer Pattern**
 
-Separates academic risk events from notification handling, supporting controlled advisor alerts and duplicate-notification prevention.
+Separates academic risk events from notification handling.
 
 **Repository Pattern**
 
-Separates persistence operations from business logic and supports centralized data access and ownership validation.
+Separates persistence operations from business logic.
 
 ### Proposed Logical Architecture
 
 ```mermaid
 flowchart TD
-    A[Student Interface] --> D[Application Services]
-    B[Advisor Interface] --> D
-    C[Administrator Interface] --> D
+    A[Student Workspace] --> D[Application Services]
+    B[Advisor Workspace] --> D
+    C[Administrator Workspace] --> D
 
     D --> E[Academic Rules Validation]
-    D --> F[Schedule Optimization Engine]
+    D --> F[Optimization Engine]
     D --> G[Academic Risk Assessment]
     D --> H[Authorization Services]
 
@@ -635,171 +843,160 @@ flowchart TD
     D --> J[Repository Layer]
     J --> K[(PostgreSQL)]
 
-    E -. Authorized read-only integration .-> L[University Academic System]
-    G -. Conditional integration .-> M[Notification Service]
+    E -. Authorized Integration .-> L[University Academic System]
+    G -. Conditional Integration .-> M[Notification Service]
 
     style D fill:#7563E8,color:#fff
     style I fill:#4ADE80,color:#101426
     style K fill:#171C30,color:#fff
 ```
 
-This architecture is a proposed implementation blueprint, not a verified inventory of the deployed prototype's technology stack.
+The architecture represents a proposed implementation blueprint, not a verified inventory of the deployed prototype's technology stack.
 
 ---
 
-## 14 — Requirements Traceability
+## 18 — Requirements Traceability & Validation
 
-Engineering decisions were linked to their corresponding requirements.
+Requirements were connected to their corresponding design mechanisms.
 
-| Requirement | Design Mechanism |
+| Requirement Area | Design Mechanism |
 |---|---|
-| FR-05 | Prerequisite and co-requisite validation |
-| FR-06 | Credit-hour validation |
-| FR-07–08 | Feasible schedule generation and conflict detection |
-| FR-09–10 | Constraint separation and ordered preference ranking |
-| FR-14 | Fixed section selections |
-| FR-18 | Failure and conflict explanations |
-| FR-21–22 | Academic risk assessment and advisor notification |
-| FR-23–24 | Authorized timetable imports and updates |
-| FR-25 | Transactional management of three active plans |
-| FR-27 | Timetable export |
-| FR-28 | Authorized authentication |
-| NFR-01 | Role-based and record-level authorization |
-| NFR-05 | Proposed performance benchmark |
-
----
-
-## 15 — Performance & Validation Strategy
-
-The proposed performance target is:
-
-- At least 95% of standard timetable-generation requests completed within five seconds.
-- Up to seven selected courses.
-- A proposed workload of 1,000 concurrent users during registration.
-
-These are design targets, not measured results.
+| Academic Eligibility | Prerequisite validation |
+| Credit Restrictions | Academic load validation |
+| Schedule Generation | Constraint-based optimization |
+| Conflict Prevention | Meeting overlap detection |
+| Student Preferences | Ordered preference evaluation |
+| Section Locking | Fixed section selection |
+| Academic Risk | Dependency analysis |
+| Advisor Intervention | Conditional escalation |
+| Data Imports | Authorized schema validation |
+| Authentication | Proposed institutional integration |
 
 ### Proposed Validation Scenarios
 
-| Scenario | Expected Behavior |
+| Test Scenario | Expected Behavior |
 |---|---|
 | Overlapping sections | Exclude invalid combinations |
 | Missing prerequisite | Explain academic ineligibility |
-| Excessive credit load | Reject the invalid proposed load |
-| Conflicting locked sections | Preserve locks and explain the conflict |
-| Multiple feasible schedules | Return distinct ranked alternatives |
-| Solver timeout | Report an inconclusive result |
-| Required course removal | Assess and explain progression risk |
-| Unauthorized advisor access | Deny access |
-| Invalid CSV import | Reject invalid records |
-| Fourth saved timetable | Require explicit replacement |
+| Excessive credit load | Reject invalid academic load |
+| Conflicting locked sections | Explain infeasibility |
+| Multiple feasible schedules | Present distinct alternatives |
+| Solver timeout | Report inconclusive search |
+| Required course removal | Assess academic progression risk |
+| Unauthorized access | Deny access |
+| Invalid timetable import | Reject invalid records |
+| Fourth saved schedule | Request explicit replacement |
+
+### Performance Targets
+
+The proposed performance requirements include:
+
+- 95% of standard timetable generation requests within five seconds.
+- Support for up to seven selected courses in the standard generation scenario.
+- A proposed registration-period workload of 1,000 concurrent users.
+
+These are design targets and not measured benchmark results.
 
 ---
 
-## 16 — AI-Assisted Systems Engineering
+## 19 — AI-Assisted Systems Engineering
 
 ChatGPT and Claude were used as simulated stakeholders and specialized engineering consultants.
 
-| Stage | AI Role |
+| Engineering Stage | AI Role |
 |---|---|
-| Requirements Elicitation | Simulated stakeholders |
+| Requirements Elicitation | Simulated stakeholder |
 | Requirements Revision | Senior systems analyst |
 | Development Methodology | Methodology consultant |
 | Use Case Realization | Object-oriented design consultant |
 | Security Engineering | Security consultant |
-| Software Reuse | Reuse and architecture consultant |
+| Software Reuse | Architecture and reuse consultant |
 
-AI-generated recommendations were critically reviewed against project requirements, technical feasibility, security considerations, and system boundaries.
+AI-generated recommendations were critically evaluated using the Accept, Modify, or Reject framework.
 
-The team retained responsibility for all final design decisions.
-
-No real student records or confidential institutional information were shared during the documented AI interactions.
+Final engineering decisions remained the responsibility of the project team.
 
 ---
 
-## 17 — Interactive Prototype
+## 20 — My Contribution
+
+### Wala Chadi — Requirements Engineering
+
+My primary responsibility was Requirements Elicitation and Requirements Revision.
+
+My contributions included:
+
+- Stakeholder identification and analysis.
+- Progressive AI-simulated stakeholder interviews.
+- Academic scheduling scenario exploration.
+- Initial functional requirements extraction.
+- Identification of ambiguous and missing requirements.
+- Functional and non-functional requirements refinement.
+- Business rule analysis.
+- Academic progression and graduation-risk analysis.
+- Critical evaluation of AI-generated recommendations.
+- Contribution to the final requirements baseline.
+
+This project strengthened my experience in systems analysis, requirements engineering, analytical problem-solving, constraint-based thinking, and academic decision-support design.
+
+---
+
+## 21 — Project Scope & Limitations
+
+Jadwalak is an academic systems analysis and design project supported by an interactive prototype.
+
+The prototype uses simulated academic data.
+
+It does not:
+
+- Perform official university registration.
+- Reserve course seats.
+- Guarantee real-time seat availability.
+- Modify official academic records.
+- Provide verified production-level institutional integration.
+
+The mathematical models, architecture diagrams, security controls, and solver selection describe the proposed engineering design.
+
+Annotated interface illustrations are used to explain intended functionality and may differ slightly from the original screenshots.
+
+---
+
+## 22 — Interactive Prototype
 
 <div align="center">
 
 ### Experience Jadwalak
 
-[![Launch Prototype](https://img.shields.io/badge/Launch-Jadwalak-7563E8?style=for-the-badge)](https://jadwalak-ai-academic-planning-platform-614442925222.europe-west2.run.app)
+Explore the interactive academic planning environment.
+
+[![Launch Jadwalak](https://img.shields.io/badge/Launch-Jadwalak-7563E8?style=for-the-badge)](https://jadwalak-ai-academic-planning-platform-614442925222.europe-west2.run.app)
+
+**Student · Academic Advisor · Schedule Administrator**
 
 </div>
 
-The interactive prototype demonstrates the intended user experience and academic planning concept.
-
-It serves as a visual representation of the proposed system rather than evidence of completed production integration.
-
 ---
 
-## 18 — My Contribution
+## Academic Context
 
-### Wala Chadi — Requirements Engineering
-
-My primary responsibility within the project was Requirements Elicitation and Requirements Revision.
-
-My contributions included:
-
-- Identifying stakeholder needs and system boundaries.
-- Conducting progressive AI-simulated stakeholder interviews.
-- Exploring academic scheduling and graduation-risk scenarios.
-- Extracting and documenting initial functional requirements.
-- Identifying ambiguities and missing requirements.
-- Refining functional and non-functional requirements.
-- Establishing business rules and academic planning constraints.
-- Evaluating AI-generated recommendations.
-- Contributing to the final requirements baseline used by the project team.
-
-This work strengthened my experience in systems analysis, requirements engineering, analytical problem-solving, constraint-based thinking, and AI-assisted engineering.
-
----
-
-## 19 — Academic Context & Team
-
-**King Saud University**
-
-College of Computer and Information Sciences
-
-**IS 340 — Systems Analysis & Design II**
-
-Academic Year: 2026
-
-| Team Member | Responsibility |
+| Information | Details |
 |---|---|
-| Wala Chadi | Requirements Elicitation & Revision |
-| Lina Almarri | Development Methodology |
-| Elan Alqubayshi | Use Case Realization |
-| Fai Ali Alyami | Security Engineering |
-| Aryam Almuhanna | Software Reuse |
-
----
-
-## 20 — Project Scope & Limitations
-
-Jadwalak is an academic systems analysis and design project supported by an interactive prototype.
-
-The system is not intended to:
-
-- Perform official course registration.
-- Reserve university course seats.
-- Guarantee real-time seat availability.
-- Create official course sections.
-- Modify institutional academic records.
-
-University authentication, academic record integration, advisor notifications, solver performance, and production security require further implementation, authorization, and validation.
+| University | King Saud University |
+| College | College of Computer and Information Sciences |
+| Course | IS 340 — Systems Analysis & Design II |
+| Academic Year | 2026 |
+| Project Type | Academic Team Project |
+| Deliverable | Systems Analysis, Design & Interactive Prototype |
 
 ---
 
 <div align="center">
 
-<img src="./assets/banner.gif" width="65%" alt="Jadwalak">
+### JADWALAK | جدولك
 
-**JADWALAK | جدولك**
+**Beyond the Timetable.**
 
-*Beyond the Timetable.*
-
-Systems Engineering · Optimization · Academic Decision Support
+Systems Engineering · Mathematical Optimization · Academic Decision Support
 
 King Saud University — 2026
 
