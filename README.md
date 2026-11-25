@@ -1,10 +1,11 @@
 
 
 <div align="center">
+  <img src="./assets/IMG_6547.jpeg" 
+       width="100%" 
+       alt="Jadwalak | Beyond the Timetable">
+</div>
 
-<img src="./assets/banner.gif" width="100%" alt="Jadwalak Animated Identity">
-
-# Jadwalak | جدولك
 
 ### Beyond the Timetable
 
