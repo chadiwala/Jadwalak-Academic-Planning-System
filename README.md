@@ -976,20 +976,6 @@ Explore the interactive academic planning environment.
 </div>
 
 ---
-
-## Academic Context
-
-| Information | Details |
-|---|---|
-| University | King Saud University |
-| College | College of Computer and Information Sciences |
-| Course | IS 340 — Systems Analysis & Design II |
-| Academic Year | 2026 |
-| Project Type | Academic Team Project |
-| Deliverable | Systems Analysis, Design & Interactive Prototype |
-
----
-
 <div align="center">
 
 ### JADWALAK | جدولك
@@ -998,7 +984,7 @@ Explore the interactive academic planning environment.
 
 Systems Engineering · Mathematical Optimization · Academic Decision Support
 
-King Saud University — 2026
+
 
 </div>
 
